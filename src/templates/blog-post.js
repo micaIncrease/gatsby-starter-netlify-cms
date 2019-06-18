@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import "./styles.sass"
 
 export const BlogPostTemplate = ({
   content,
@@ -17,7 +18,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section blog">
       {helmet || ''}
       <div className="container content">
         <div className="columns">
