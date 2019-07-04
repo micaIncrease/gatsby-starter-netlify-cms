@@ -21,21 +21,23 @@ Esta api te da toda la información de las liquidaciones que las procesadoras te
 * Total presentado - Total descontado = Total Earn
 
 > Es importante que valides siempre **la versión de los payments**(liquidaciones) antes de registrarlos en tu sistema. Puede suceder que una liquidación tenga una actualización en Increase. Si eso sucede y esa liquidación es reprocesada, entonces se generará una nueva liquidación con un payment_id diferente, pero que hace referencia a la misma liquidación bancaria. Debes validar si es la misma liquidación bancaria a partir de los siguientes 4 campos:\
-> - Clearing number
-> - Payment date
-> - Provider
-> - Nro de establecimiento
 >
->
+> * Clearing number
+> * Payment date
+> * Provider
+> * Nro de establecimiento
 
 También podrás buscar un payment en específico utilizando el ID de increase. <Ver ejemplo>
 
-API de Movements: Esta api te da toda la información de los movimientos (movements) que componen una liquidación,es decir, el detalle de las transacciones, deducciones y contracargos.
+**API de Movements**\
+Esta api te da toda la información de los movimientos (movements) que componen una liquidación,es decir, el detalle de las transacciones, deducciones y contracargos.
 
 Puedes hacer una consulta por un período, o mismo buscando un movimiento en específico según el ID de Increse
 
-Api de Chargebacks: Esta API te da toda la información de contracargos que hayas tenido en las liquidaciones. A qué llamamos contracargos? A todos los reversos de la tarjeta, que pueden ser por cualquiera de los siguiente 4 motivos: devoluciones, desconocimientos de compra (contracargos), ajustes, o rechazos.
+**Api de Chargebacks**\
+ Esta API te da toda la información de contracargos que hayas tenido en las liquidaciones. A qué llamamos contracargos? A todos los reversos de la tarjeta, que pueden ser por cualquiera de los siguiente 4 motivos: devoluciones, desconocimientos de compra (contracargos), ajustes, o rechazos.
 
 Puedes obtener los contracargos de un período, o puedes buscar un contracargo en específico según el ID de Increase.
 
-API de Impuestos: Acá te presentaremos todos los impuestos sumarizados de determinado período.
+**API de Impuestos**\
+Acá te presentaremos todos los impuestos sumarizados de determinado período.
