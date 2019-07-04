@@ -9,7 +9,7 @@ title: Guías
 Existen varias APIs a las que podrás consultar en base a la información que estés precisando.
 
 **API de Payments**\
-\*\*\*\*\
+\
 Esta api te da toda la información de las liquidaciones que las procesadoras te emitieron, es decir, las clearings diarias. Dentro de cada Clearing, puedes filtrar para obtener o no el detalle de los movimientos (movements) que la componen , es decir, el detalle de las transacciones, deducciones y contracargos.
 
 > Si vas a automatizar la búsqueda de payments, siempre te recomendamos hacerlo buscando todos los días por fecha de creación el día anterior. Esta es la única forma de asegurarse no perder nunca una liquidación ya que alguna tarjeta podría agregar una liquidación con fecha de pago hoy el día de mañana y si buscas solo por fecha de pago nunca llegarías a ese dato.
@@ -21,9 +21,9 @@ Esta api te da toda la información de las liquidaciones que las procesadoras te
 * Total presentado - Total descontado = Total Earn
 
 > Es importante que valides siempre **la versión de los payments**(liquidaciones) antes de registrarlos en tu sistema. Puede suceder que una liquidación tenga una actualización en Increase. Si eso sucede y esa liquidación es reprocesada, entonces se generará una nueva liquidación con un payment_id diferente, pero que hace referencia a la misma liquidación bancaria. Debes validar si es la misma liquidación bancaria a partir de los siguientes 4 campos:\
-> - Clearing number\
-> - Payment date\
-> - Provider\
+> - Clearing number
+> - Payment date
+> - Provider
 > - Nro de establecimiento
 >
 >
